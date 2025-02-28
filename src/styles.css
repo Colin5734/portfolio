@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.fullpage-container {
+  height: 100vh;
+  overflow-y: auto; /* Erlaubt Scrollen im Container */
+  scroll-snap-type: y mandatory;
+  margin: 0;
+  -ms-overflow-style: none; /* Für Edge und IE */
+  scrollbar-width: none; /* Für Firefox */
+}
+
+.fullpage-container::-webkit-scrollbar {
+  display: none; /* Für Chrome, Safari, Opera */
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
