@@ -1,4 +1,28 @@
-<section class="section" id="cv">
+<section class="timeline-section section">
   <h1>Lebenslauf</h1>
-  <p>Dies ist mein Lebenslauf.</p>
+
+  <!-- Äußerer Scroll-Container: Bei schmalen Viewports kann horizontal gescrollt werden -->
+  <div class="timeline-scroll">
+    <!-- Flex-Container für alle Items -->
+    <div class="timeline-items">
+      <!-- Zentrale Linie in der Mitte -->
+      <div class="timeline-axis"></div>
+
+      <!-- Jedes Timeline-Item in einer Zeile (inline-flex) -->
+      <div
+        class="timeline-item"
+        *ngFor="let item of timelineItems"
+        [ngClass]="item.type === 'Berufserfahrung' ? 'top' : 'bottom'"
+      >
+        <!-- Verbindungslinie vom Item zur Achse -->
+        <div class="connector"></div>
+        <!-- Inhalt der Box -->
+        <div class="timeline-content">
+          <h3>{{ item.title }}</h3>
+          <span class="date">{{ item.date }}</span>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
