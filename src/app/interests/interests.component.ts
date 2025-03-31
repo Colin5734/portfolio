@@ -5,8 +5,13 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './interests.component.html',
-  styleUrl: './interests.component.css'
+  styleUrl: './interests.component.css',
 })
 export class InterestsComponent {
-
+  scrollToContact() {
+    const element = document.getElementById('quiz');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

@@ -3,7 +3,7 @@ import { MeComponent } from './me/me.component';
 import { CvComponent } from './cv/cv.component';
 import { InterestsComponent } from './interests/interests.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { QuizComponent } from './quiz/quiz.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ import { QuizComponent } from './quiz/quiz.component';
     CvComponent,
     InterestsComponent,
     HomepageComponent,
-    QuizComponent,
+    ContactComponent,
   ],
 })
 export class AppComponent {

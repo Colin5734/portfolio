@@ -2,27 +2,27 @@ html,
 body {
   height: 100%;
   margin: 0;
-  overflow: hidden; /* Kein normales Scrollen, nur Snapping */
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 
 .fullpage-container {
-  height: 100vh; /* Exakte Bildschirmhöhe */
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  scroll-snap-type: y mandatory; /* Erzwingt das Springen */
-  overflow-y: scroll; /* Scrollen aktivieren */
-  -ms-overflow-style: none; /* Entfernt Scrollbalken in Edge & IE */
-  scrollbar-width: none; /* Entfernt Scrollbalken in Firefox */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .fullpage-container::-webkit-scrollbar {
-  display: none; /* Entfernt Scrollbalken in Chrome, Safari, Opera */
+  display: none;
 }
 
 .section {
-  height: 100vh; /* Exakt eine Bildschirmhöhe */
-  scroll-snap-align: start; /* Springt zur nächsten Seite */
+  height: 100vh;
+  scroll-snap-align: start;
   display: flex;
   flex-direction: column;
   justify-content: center;
