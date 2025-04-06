@@ -29,4 +29,12 @@ body {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  background: #f1f1f1;
+  background-image: linear-gradient(#e1e1e1 0.1em, transparent 0.1em);
+  background-size: 100% 30px;
+}
+
+h1 {
+  font-family: "Patrick Hand", cursive;
+  font-size: 30px;
 }

@@ -126,25 +126,6 @@
     }
   }
 
-  & > span:nth-child(5) {
-    position: absolute;
-    background-color: var(--yellow-400);
-    border: 2px solid var(--stone-800);
-    border-radius: 0.75rem;
-    pointer-events: none;
-    z-index: -1;
-    inset: 0.5rem 1.5rem;
-    box-shadow: 7px 0 0 0 var(--stone-800), inset 0 2px 0 0 var(--yellow-300),
-      inset 0 -2px 0 0 var(--yellow-500);
-    transition: all 0ms cubic-bezier(0, 0.5, 0.4, 1);
-  }
-
-  & button:active ~ span:nth-child(5) {
-    transform: translateY(-200%);
-    transition-duration: 200ms;
-    opacity: 0;
-  }
-
   & button:hover ~ span:nth-child(4) {
     filter: drop-shadow(0.125em 0.125em 0 rgba(0, 0, 0, 0.2));
   }
@@ -166,4 +147,16 @@
       outline-color: var(--yellow-400);
     }
   }
+}
+
+.section {
+  position: relative;
+}
+
+h2 {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 90px;
 }

@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 })
 export class InterestsComponent {
   scrollToContact() {
-    const element = document.getElementById('quiz');
+    console.log('scrollToContact aufgerufen');
+    const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
