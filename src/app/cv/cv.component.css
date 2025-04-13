@@ -1,0 +1,11 @@
+.section {
+  position: relative;
+}
+
+h1 {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 90px;
+}

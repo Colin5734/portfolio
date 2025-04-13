@@ -1,5 +1,5 @@
 <section class="section" id="interests">
-  <h1>In meiner Freizeit...</h1>
+  <h1>In meiner Freizeit</h1>
   <div>
     <div class="wrapper">
       <div class="inner" style="--quantity: 10">
@@ -84,7 +84,16 @@
         >
           <a href="https://aare.guru/#bern" target="_blank">
             <div class="img"></div>
-            <div class="card-text">Aare</div>
+            <div class="card-text">
+              Aare<br />
+              <span style="font-size: 0.6em">
+                {{
+                  currentTemperature !== null
+                    ? currentTemperature + " °C"
+                    : "Lädt..."
+                }}
+              </span>
+            </div>
           </a>
         </div>
         <div

@@ -153,9 +153,9 @@
   position: relative;
 }
 
-h2 {
+h1 {
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 90px;
