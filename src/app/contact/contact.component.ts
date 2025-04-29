@@ -8,4 +8,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent {}
+export class ContactComponent {
+  isFormVisible: boolean = false;
+
+  constructor() {}
+
+  showContactForm(): void {
+    this.isFormVisible = true;
+  }
+}
