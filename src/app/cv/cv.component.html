@@ -1,3 +1,26 @@
-<section class="section" id="cv">
+<section class="section cv-section" id="cv">
   <h1>Bisherige Erfahrungen</h1>
+
+  <div class="timeline-container">
+    <div class="timeline-wrapper">
+      <div
+        *ngFor="let item of timelineItems; let i = index"
+        class="timeline-item"
+        [ngClass]="{
+          'timeline-item-right': i % 2 !== 0,
+          'timeline-item-left': i % 2 === 0,
+          beruf: item.type === 'Berufserfahrung',
+          ausbildung: item.type === 'Ausbildung'
+        }"
+      >
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">{{ item.date }}</span>
+          <h3 class="timeline-title">{{ item.title }}</h3>
+          <p class="timeline-description">{{ item.description }}</p>
+          <span class="timeline-type-badge">{{ item.type }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

@@ -114,16 +114,8 @@ h1 {
 
 @media screen and (max-width: 767px) {
   h1 {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    text-align: center;
-    width: 100%;
-    margin-top: 40px;
-    margin-bottom: 25px;
-    font-size: 26px;
-    white-space: normal;
+    margin-top: 30px;
+    font-size: 20px;
   }
 
   .cards-container {

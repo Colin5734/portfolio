@@ -15,9 +15,26 @@
   <div *ngIf="isFormVisible" class="form-container">
     <h2>Frag einfach!</h2>
     <form class="form" action="https://formspree.io/f/mblgweod" method="POST">
+      <div style="display: none">
+        <label for="website">Nicht ausfüllen (Spam-Schutz)</label>
+        <input
+          type="text"
+          name="_gotcha"
+          id="website"
+          tabindex="-1"
+          autocomplete="off"
+        />
+      </div>
+
       <div class="form-group">
         <label for="email">Deine E-Mail</label>
-        <input type="email" id="email" name="email" required="" />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autocomplete="email"
+        />
       </div>
       <div class="form-group">
         <label for="textarea">Deine Nachricht</label>
@@ -26,7 +43,8 @@
           id="textarea"
           rows="10"
           cols="50"
-          required=""
+          required
+          autocomplete="off"
         ></textarea>
       </div>
       <button class="form-submit-btn" type="submit">Senden</button>

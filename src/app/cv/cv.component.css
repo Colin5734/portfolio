@@ -1,11 +1,226 @@
-.section {
+.cv-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-h1 {
+.h1 {
   position: absolute;
-  top: 25px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 90px;
+  margin-top: 50px;
+  z-index: 10;
+  font-family: "Patrick Hand", cursive;
+  color: #333;
+}
+
+.timeline-container {
+  width: 90%;
+  max-width: 700px;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.timeline-container::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline-wrapper {
+  position: relative;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.timeline-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: #ccc;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border-radius: 1.5px;
+  background: linear-gradient(145deg, #40c9ff, #e81cff);
+}
+
+.timeline-item {
+  padding: 8px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item-left {
+  left: 0;
+  padding-right: 50px;
+  text-align: right;
+}
+
+.timeline-item-right {
+  left: 50%;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.timeline-dot {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border: 2px solid #ccc;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item-left .timeline-dot {
+  right: 0px;
+  transform: translateX(50%);
+}
+
+.timeline-item-right .timeline-dot {
+  left: 0px;
+  transform: translateX(-50%);
+}
+
+.timeline-item.beruf .timeline-dot {
+  border-color: #e81cff;
+}
+.timeline-item.ausbildung .timeline-dot {
+  border-color: #40c9ff;
+}
+
+.timeline-content {
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.88);
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  min-height: 30px;
+  background: linear-gradient(#e8e5e5, #c0ddeb) padding-box,
+    linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+}
+
+.timeline-date {
+  display: block;
+  font-size: 0.75em;
+  color: #666;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.timeline-title {
+  margin: 0 0 6px 0;
+  font-size: 1em;
+  color: #333;
+  font-weight: 600;
+  font-family: "Arial", sans-serif;
+}
+.timeline-description {
+  margin: 0 0 8px 0;
+  font-size: 0.85em;
+  color: #555;
+  line-height: 1.25;
+}
+.timeline-type-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.65em;
+  font-weight: bold;
+  color: white;
+}
+.timeline-item.beruf .timeline-type-badge {
+  background-color: #e81cff;
+}
+.timeline-item.ausbildung .timeline-type-badge {
+  background-color: #40c9ff;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-container {
+    max-width: 100%;
+    padding: 0 5px;
+  }
+
+  .timeline-wrapper {
+    padding: 15px 0;
+  }
+
+  .timeline-wrapper::after {
+    left: 25px;
+    transform: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 55px;
+    padding-right: 10px;
+    text-align: left !important;
+    margin-bottom: 15px;
+  }
+  .timeline-item-left,
+  .timeline-item-right {
+    left: 0;
+    padding-left: 55px;
+    padding-right: 10px;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 25px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .timeline-content {
+    padding: 8px 12px;
+    min-height: 30px;
+    border-radius: 4px;
+  }
+  .timeline-date {
+    font-size: 0.7em;
+    margin-bottom: 3px;
+  }
+  .timeline-title {
+    font-size: 0.95em;
+    margin-bottom: 4px;
+  }
+  .timeline-description {
+    font-size: 0.8em;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  .timeline-type-badge {
+    font-size: 0.6em;
+    padding: 2px 5px;
+  }
+
+  h1 {
+    margin-top: 30px;
+    font-size: 20px;
+  }
 }

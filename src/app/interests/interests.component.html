@@ -39,7 +39,16 @@
         >
           <a href="https://coinmarketcap.com/de/" target="_blank">
             <div class="img"></div>
-            <div class="card-text">Finance</div>
+            <div class="card-text">
+              Finance<br />
+              <span style="font-size: 0.6em">
+                {{
+                  bitcoinPrice !== null
+                    ? "Bitcoin: " + (bitcoinPrice | number : "1.2-2") + " $"
+                    : "Lädt..."
+                }}
+              </span>
+            </div>
           </a>
         </div>
         <div
