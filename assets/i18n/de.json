@@ -1,0 +1,127 @@
+{
+  "homepage": {
+    "pageTitle": "Colin Marti",
+    "degreeCountdownPrefix": "In ",
+    "degreeCountdownSuffix": " BSc in Wirtschaftsinformatik",
+    "social": {
+      "githubAriaLabel": "GitHub",
+      "linkedinAriaLabel": "LinkedIn",
+      "countdownFormat": "{{days}} Tagen, {{hours}} Std, {{minutes}} Min, {{seconds}} Sek",
+      "timeUnits": {
+        "days": "Tagen",
+        "hours": "Std",
+        "minutes": "Min",
+        "seconds": "Sek"
+      }
+    }
+  },
+  "contact": {
+    "interestPrompt": "Noch Interesse für mehr?",
+    "openFormButton": {
+      "ariaLabel": "Kontaktformular öffnen"
+    },
+    "form": {
+      "title": "Frag einfach!",
+      "spamProtection": "Nicht ausfüllen (Spam-Schutz)",
+      "emailLabel": "Deine E-Mail",
+      "messageLabel": "Deine Nachricht",
+      "submitButton": "Senden"
+    }
+  },
+  "cv": {
+    "title": "Bisherige Erfahrungen",
+    "timeline": {
+      "item1": {
+        "title": "Kaufmann EFZ",
+        "description": "WKS Bern",
+        "type": "Ausbildung"
+      },
+      "item2": {
+        "title": "Berufsmatur Typ Wirtschaft",
+        "description": "WKS Bern",
+        "type": "Ausbildung"
+      },
+      "item3": {
+        "title": "Sachbearbeiter",
+        "description": "Eidg. Steuerverwaltung",
+        "type": "Berufserfahrung"
+      },
+      "item4": {
+        "title": "Administrativer Assistent",
+        "description": "Bundesamt für Gesundheit",
+        "type": "Berufserfahrung"
+      },
+      "item5": {
+        "title": "BSc Wirtschaftsinformatik",
+        "description": "Berner Fachhochschule",
+        "type": "Ausbildung"
+      },
+      "item6": {
+        "title": "Praktikum IT Security",
+        "description": "Steuerverwaltung Kt. Bern",
+        "type": "Berufserfahrung"
+      },
+      "types": {
+        "education": "Ausbildung",
+        "workExperience": "Berufserfahrung"
+      }
+    }
+  },
+  "interests": {
+    "title": "In meiner Freizeit",
+    "cards": {
+      "contact": {
+        "text": "???"
+      },
+      "music": {
+        "text": "Musik"
+      },
+      "chess": {
+        "text": "Schach"
+      },
+      "finance": {
+        "text": "Finance",
+        "bitcoinPrice": "Bitcoin: {{price}} $",
+        "loading": "Lädt..."
+      },
+      "fifa": {
+        "text": "FIFA"
+      },
+      "tennis": {
+        "text": "Tennis"
+      },
+      "gambling": {
+        "text": "Gambling"
+      },
+      "rocketLeague": {
+        "text": "Rocket League"
+      },
+      "aare": {
+        "text": "Aare",
+        "temperature": "{{temp}} °C",
+        "loading": "Lädt..."
+      },
+      "chelsea": {
+        "text": "Chelsea FC"
+      }
+    }
+  },
+  "me": {
+    "title": "Was mich begeistert",
+    "cards": {
+      "cyberSecurity": {
+        "title": "Cyber Security",
+        "description": "Was für Gefahren lauern im Internet und wie schütze ich micht richtig? Diesen Fragen auf den Grund zu gehen, begeistert mich mit jeder neuen Entwicklung wieder!",
+        "imageAlt": "Cyber Security Icon"
+      },
+      "dataAnalysis": {
+        "title": "Datenanalyse",
+        "description": "Daten erzählen Geschichten. Ich liebe es, Muster zu entdecken und aus Rohdaten wertvolle Erkenntnisse zu gewinnen.",
+        "imageAlt": "Data Analysis Icon"
+      }
+    }
+  },
+  "common": {
+    "loading": "Lädt..."
+  }
+}

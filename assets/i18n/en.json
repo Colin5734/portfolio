@@ -1,0 +1,122 @@
+{
+  "homepage": {
+    "pageTitle": "Colin Marti",
+    "degreeCountdownPrefix": "BSc in Business Informatics in ",
+    "degreeCountdownSuffix": "",
+    "degreeAchievedMessage": "🎓 Goal achieved!",
+    "social": {
+      "githubAriaLabel": "GitHub",
+      "linkedinAriaLabel": "LinkedIn",
+      "countdownFormat": "{{days}} days, {{hours}} hrs, {{minutes}} min, {{seconds}} sec"
+    }
+  },
+  "contact": {
+    "interestPrompt": "Still interested in more?",
+    "openFormButton": {
+      "ariaLabel": "Open contact form"
+    },
+    "form": {
+      "title": "Just ask!",
+      "spamProtection": "Do not fill (spam protection)",
+      "emailLabel": "Your Email",
+      "messageLabel": "Your Message",
+      "submitButton": "Send"
+    }
+  },
+  "cv": {
+    "title": "Previous Experiences",
+    "timeline": {
+      "item1": {
+        "title": "Commercial Clerk CFC",
+        "description": "WKS Bern",
+        "type": "Education"
+      },
+      "item2": {
+        "title": "Vocational Baccalaureate Economics",
+        "description": "WKS Bern",
+        "type": "Education"
+      },
+      "item3": {
+        "title": "Clerk",
+        "description": "Federal Tax Administration",
+        "type": "Work Experience"
+      },
+      "item4": {
+        "title": "Administrative Assistant",
+        "description": "Federal Office of Public Health",
+        "type": "Work Experience"
+      },
+      "item5": {
+        "title": "BSc Business Information Technology",
+        "description": "Bern University of Applied Sciences",
+        "type": "Education"
+      },
+      "item6": {
+        "title": "Internship IT Security",
+        "description": "Tax Administration Canton of Bern",
+        "type": "Work Experience"
+      },
+      "types": {
+        "education": "Education",
+        "workExperience": "Work Experience"
+      }
+    }
+  },
+  "interests": {
+    "title": "In my free time",
+    "cards": {
+      "contact": {
+        "text": "???"
+      },
+      "music": {
+        "text": "Music"
+      },
+      "chess": {
+        "text": "Chess"
+      },
+      "finance": {
+        "text": "Finance",
+        "bitcoinPrice": "Bitcoin: {{price}} $",
+        "loading": "Loading..."
+      },
+      "fifa": {
+        "text": "FIFA"
+      },
+      "tennis": {
+        "text": "Tennis"
+      },
+      "gambling": {
+        "text": "Gambling"
+      },
+      "rocketLeague": {
+        "text": "Rocket League"
+      },
+      "aare": {
+        "text": "Aare",
+        "temperature": "{{temp}} °C",
+        "loading": "Loading..."
+      },
+      "chelsea": {
+        "text": "Chelsea FC"
+      }
+    }
+  },
+  "me": {
+    "title": "What excites me",
+    "cards": {
+      "cyberSecurity": {
+        "title": "Cyber Security",
+        "description": "What dangers lurk on the internet and how do I protect myself properly? Getting to the bottom of these questions excites me with every new development!",
+        "imageAlt": "Cyber Security Icon"
+      },
+      "dataAnalysis": {
+        "title": "Data Analysis",
+        "description": "Data tells stories. I love discovering patterns and gaining valuable insights from raw data.",
+        "imageAlt": "Data Analysis Icon"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading..."
+  }
+}
