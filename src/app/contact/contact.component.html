@@ -1,10 +1,10 @@
 <section id="contact" class="section">
-  <h1 *ngIf="!isFormVisible">Noch Interesse für mehr?</h1>
+  <h1 *ngIf="!isFormVisible">{{ "contact.interestPrompt" | translate }}</h1>
 
   <div class="button" *ngIf="!isFormVisible">
     <button
       (click)="showContactForm()"
-      aria-label="Kontaktformular öffnen"
+      [attr.aria-label]="'contact.openFormButton.ariaLabel' | translate"
     ></button>
     <span></span>
     <span></span>
@@ -13,10 +13,12 @@
   </div>
 
   <div *ngIf="isFormVisible" class="form-container">
-    <h2>Frag einfach!</h2>
+    <h2>{{ "contact.form.title" | translate }}</h2>
     <form class="form" action="https://formspree.io/f/mblgweod" method="POST">
       <div style="display: none">
-        <label for="website">Nicht ausfüllen (Spam-Schutz)</label>
+        <label for="website">{{
+          "contact.form.spamProtection" | translate
+        }}</label>
         <input
           type="text"
           name="_gotcha"
@@ -27,7 +29,7 @@
       </div>
 
       <div class="form-group">
-        <label for="email">Deine E-Mail</label>
+        <label for="email">{{ "contact.form.emailLabel" | translate }}</label>
         <input
           type="email"
           id="email"
@@ -37,7 +39,9 @@
         />
       </div>
       <div class="form-group">
-        <label for="textarea">Deine Nachricht</label>
+        <label for="textarea">{{
+          "contact.form.messageLabel" | translate
+        }}</label>
         <textarea
           name="message"
           id="textarea"
@@ -47,7 +51,9 @@
           autocomplete="off"
         ></textarea>
       </div>
-      <button class="form-submit-btn" type="submit">Senden</button>
+      <button class="form-submit-btn" type="submit">
+        {{ "contact.form.submitButton" | translate }}
+      </button>
     </form>
   </div>
 </section>

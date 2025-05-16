@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 import { MeComponent } from './me/me.component';
 import { CvComponent } from './cv/cv.component';
@@ -12,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   imports: [
+    CommonModule,
+    TranslateModule,
     MeComponent,
     CvComponent,
     InterestsComponent,
@@ -21,4 +25,15 @@ import { ContactComponent } from './contact/contact.component';
 })
 export class AppComponent {
   title = 'MeinePortfolioSeite';
+
+  constructor(private translate: TranslateService) {
+    const savedLang = localStorage.getItem('lang') || 'de';
+    translate.setDefaultLang(savedLang);
+    translate.use(savedLang);
+  }
+
+  switchLang(lang: string): void {
+    this.translate.use(lang);
+    localStorage.setItem('lang', lang);
+  }
 }

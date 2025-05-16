@@ -1,5 +1,5 @@
 <section class="section" id="interests">
-  <h1>In meiner Freizeit</h1>
+  <h1>{{ "interests.title" | translate }}</h1>
   <div>
     <div class="wrapper">
       <div class="inner" style="--quantity: 10">
@@ -9,7 +9,9 @@
         >
           <a (click)="scrollToContact()">
             <div class="img"></div>
-            <div class="card-text">???</div>
+            <div class="card-text">
+              {{ "interests.cards.contact.text" | translate }}
+            </div>
           </a>
         </div>
         <div
@@ -21,7 +23,9 @@
             target="_blank"
           >
             <div class="img"></div>
-            <div class="card-text">Musik</div>
+            <div class="card-text">
+              {{ "interests.cards.music.text" | translate }}
+            </div>
           </a>
         </div>
         <div
@@ -30,7 +34,9 @@
         >
           <a href="https://www.chess.com/home" target="_blank">
             <div class="img"></div>
-            <div class="card-text">Schach</div>
+            <div class="card-text">
+              {{ "interests.cards.chess.text" | translate }}
+            </div>
           </a>
         </div>
         <div
@@ -40,7 +46,7 @@
           <a href="https://coinmarketcap.com/de/" target="_blank">
             <div class="img"></div>
             <div class="card-text">
-              Finance<br />
+              {{ "interests.cards.finance.text" | translate }}<br />
               <span style="font-size: 0.6em">
                 {{
                   bitcoinPrice !== null
@@ -57,7 +63,9 @@
         >
           <a href="https://www.ea.com/de-de/games/ea-sports-fc" target="_blank">
             <div class="img"></div>
-            <div class="card-text">FIFA</div>
+            <div class="card-text">
+              {{ "interests.cards.fifa.text" | translate }}
+            </div>
           </a>
         </div>
         <div
@@ -66,7 +74,9 @@
         >
           <a href="https://www.swisstennis.ch/de/" target="_blank">
             <div class="img"></div>
-            <div class="card-text">Tennis</div>
+            <div class="card-text">
+              {{ "interests.cards.tennis.text" | translate }}
+            </div>
           </a>
         </div>
         <div
@@ -75,7 +85,9 @@
         >
           <a href="https://www.grandcasino-bern.ch/de" target="_blank">
             <div class="img"></div>
-            <div class="card-text">Gambling</div>
+            <div class="card-text">
+              {{ "interests.cards.gambling.text" | translate }}
+            </div>
           </a>
         </div>
         <div
@@ -84,7 +96,9 @@
         >
           <a href="https://www.rocketleague.com/de" target="_blank">
             <div class="img"></div>
-            <div class="card-text">Rocket League</div>
+            <div class="card-text">
+              {{ "interests.cards.rocketLeague.text" | translate }}
+            </div>
           </a>
         </div>
         <div
@@ -94,7 +108,7 @@
           <a href="https://aare.guru/#bern" target="_blank">
             <div class="img"></div>
             <div class="card-text">
-              Aare<br />
+              {{ "interests.cards.aare.text" | translate }}<br />
               <span style="font-size: 0.6em">
                 {{
                   currentTemperature !== null
@@ -111,7 +125,9 @@
         >
           <a href="https://www.chelseafc.com/en" target="_blank">
             <div class="img"></div>
-            <div class="card-text">Chelsea FC</div>
+            <div class="card-text">
+              {{ "interests.cards.chelsea.text" | translate }}
+            </div>
           </a>
         </div>
       </div>

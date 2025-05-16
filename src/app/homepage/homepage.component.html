@@ -1,4 +1,30 @@
 <section class="section" id="homepage">
-  <h1>Homepage</h1>
-  <p>Willkommen auf meiner Homepage!</p>
+  <h1>{{ "homepage.pageTitle" | translate }}</h1>
+  <h2>
+    <ng-container *ngIf="!isCountdownFinished">
+      {{ "homepage.degreeCountdownPrefix" | translate }}
+      <span class="countdown-text">{{ countdownText }}</span>
+      {{ "homepage.degreeCountdownSuffix" | translate }}
+    </ng-container>
+    <ng-container *ngIf="isCountdownFinished">
+      {{ "homepage.degreeAchievedMessage" | translate }}
+    </ng-container>
+  </h2>
+
+  <div class="social-icons">
+    <a
+      href="https://github.com/Colin5734"
+      target="_blank"
+      [attr.aria-label]="'homepage.social.githubAriaLabel' | translate"
+    >
+      <i class="fab fa-github"></i>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/colin-m-28a4352b7"
+      target="_blank"
+      [attr.aria-label]="'homepage.social.linkedinAriaLabel' | translate"
+    >
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
 </section>

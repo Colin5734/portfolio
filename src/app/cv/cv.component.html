@@ -1,5 +1,5 @@
 <section class="section cv-section" id="cv">
-  <h1>Bisherige Erfahrungen</h1>
+  <h1>{{ "cv.title" | translate }}</h1>
 
   <div class="timeline-container">
     <div class="timeline-wrapper">
@@ -9,16 +9,25 @@
         [ngClass]="{
           'timeline-item-right': i % 2 !== 0,
           'timeline-item-left': i % 2 === 0,
-          beruf: item.type === 'Berufserfahrung',
-          ausbildung: item.type === 'Ausbildung'
+          beruf: isTypeWorkExperience(item.typeKey),
+          ausbildung: isTypeEducation(item.typeKey)
         }"
       >
         <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <span class="timeline-date">{{ item.date }}</span>
-          <h3 class="timeline-title">{{ item.title }}</h3>
-          <p class="timeline-description">{{ item.description }}</p>
-          <span class="timeline-type-badge">{{ item.type }}</span>
+          <span class="timeline-date">
+            {{ item.date }}
+            <ng-container *ngIf="item.isCurrent">{{
+              "common.today" | translate
+            }}</ng-container>
+          </span>
+          <h3 class="timeline-title">{{ item.titleKey | translate }}</h3>
+          <p class="timeline-description">
+            {{ item.descriptionKey | translate }}
+          </p>
+          <span class="timeline-type-badge">{{
+            item.typeKey | translate
+          }}</span>
         </div>
       </div>
     </div>

@@ -204,14 +204,14 @@ h1 {
 
 .form-container .form-group input::placeholder {
   opacity: 0.5;
-  color: #555; /* Angepasst */
+  color: #555;
 }
 
 .form-container .form-group input:focus,
 .form-container .form-group textarea:focus {
   outline: none;
   border-color: #000000;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Fokusindikator hinzugefügt */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .form-container .form-submit-btn {

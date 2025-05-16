@@ -1,64 +1,77 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
-interface TimelineItem {
+export interface TimelineItemTranslated {
   id: number;
-  title: string;
+  titleKey: string;
   date: string;
-  description: string;
-  type: 'Berufserfahrung' | 'Ausbildung';
+  dateRaw?: string;
+  isCurrent?: boolean;
+  descriptionKey: string;
+  typeKey: string;
 }
 
 @Component({
   selector: 'app-cv',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.css'],
 })
 export class CvComponent {
-  timelineItems: TimelineItem[] = [
+  timelineItems: TimelineItemTranslated[] = [
     {
       id: 1,
-      title: 'Kaufmann EFZ',
+      titleKey: 'cv.timeline.item1.title',
       date: '2014 - 2017',
-      description: 'WKS Bern',
-      type: 'Ausbildung',
+      descriptionKey: 'cv.timeline.item1.description',
+      typeKey: 'cv.timeline.types.education',
     },
     {
       id: 2,
-      title: 'Berufsmatur Typ Wirtschaft',
+      titleKey: 'cv.timeline.item2.title',
       date: '2018 - 2019',
-      description: 'WKS Bern',
-      type: 'Ausbildung',
+      descriptionKey: 'cv.timeline.item2.description',
+      typeKey: 'cv.timeline.types.education',
     },
     {
       id: 3,
-      title: 'Sachbearbeiter',
+      titleKey: 'cv.timeline.item3.title',
       date: '04.2020 - 08.2020',
-      description: 'Eidg. Steuerverwaltung',
-      type: 'Berufserfahrung',
+      descriptionKey: 'cv.timeline.item3.description',
+      typeKey: 'cv.timeline.types.workExperience',
     },
     {
       id: 4,
-      title: 'Administrativer Assistent',
+      titleKey: 'cv.timeline.item4.title',
       date: '10.2020 - 07.2024',
-      description: 'Bundesamt für Gesundheit',
-      type: 'Berufserfahrung',
+      descriptionKey: 'cv.timeline.item4.description',
+      typeKey: 'cv.timeline.types.workExperience',
     },
     {
       id: 5,
-      title: 'BSc Wirtschaftsinformatik',
+      titleKey: 'cv.timeline.item5.title',
       date: '2022 - 2026',
-      description: 'Berner Fachhochschule',
-      type: 'Ausbildung',
+      descriptionKey: 'cv.timeline.item5.description',
+      typeKey: 'cv.timeline.types.education',
     },
     {
       id: 6,
-      title: 'Praktikum IT Security',
-      date: '08.2024 - heute',
-      description: 'Steuerverwaltung Kt. Bern',
-      type: 'Berufserfahrung',
+      titleKey: 'cv.timeline.item6.title',
+      date: '08.2024 - ',
+      dateRaw: '08.2024',
+      isCurrent: true,
+      descriptionKey: 'cv.timeline.item6.description',
+      typeKey: 'cv.timeline.types.workExperience',
     },
   ];
+
+  isTypeWorkExperience(itemTypeKey: string): boolean {
+    return itemTypeKey === 'cv.timeline.types.workExperience';
+  }
+
+  isTypeEducation(itemTypeKey: string): boolean {
+    return itemTypeKey === 'cv.timeline.types.education';
+  }
 }

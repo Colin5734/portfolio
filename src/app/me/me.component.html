@@ -1,19 +1,19 @@
 <div class="section" id="me">
-  <h1>Was mich begeistert</h1>
+  <h1>{{ "me.title" | translate }}</h1>
 
   <div class="cards-container">
     <div class="card">
       <img
         src="assets/images/cybersecurity.png"
-        alt="Cyber Security Icon"
+        [alt]="'me.cards.cyberSecurity.imageAlt' | translate"
         class="card__image"
       />
       <div class="card__content">
-        <p class="card__title">Cyber Security</p>
+        <p class="card__title">
+          {{ "me.cards.cyberSecurity.title" | translate }}
+        </p>
         <p class="card__description">
-          Was für Gefahren lauern im Internet und wie schütze ich micht richtig?
-          Diesen Fragen auf den Grund zu gehen, begeistert mich mit jeder neuen
-          Entwicklung wieder!
+          {{ "me.cards.cyberSecurity.description" | translate }}
         </p>
       </div>
     </div>
@@ -21,14 +21,15 @@
     <div class="card">
       <img
         src="assets/images/dataanalysis.png"
-        alt="Data Analysis Icon"
+        [alt]="'me.cards.dataAnalysis.imageAlt' | translate"
         class="card__image"
       />
       <div class="card__content">
-        <p class="card__title">Datenanalyse</p>
+        <p class="card__title">
+          {{ "me.cards.dataAnalysis.title" | translate }}
+        </p>
         <p class="card__description">
-          Daten erzählen Geschichten. Ich liebe es, Muster zu entdecken und aus
-          Rohdaten wertvolle Erkenntnisse zu gewinnen.
+          {{ "me.cards.dataAnalysis.description" | translate }}
         </p>
       </div>
     </div>

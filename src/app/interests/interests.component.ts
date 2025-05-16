@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { AareguruService } from '../services/aareguru.service';
 import { BitcoinPriceService } from '../services/bitcoin-price.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-interests',
   standalone: true,
   templateUrl: './interests.component.html',
   styleUrls: ['./interests.component.css'],
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
 })
 export class InterestsComponent implements OnInit {
   currentTemperature: number | null = null;
